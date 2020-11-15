@@ -25,10 +25,58 @@
             </div>	
         </div>	
         <div class="buttons">	
-            <button>Load User Data</button>	
-            <button>Display User</button>	
+            <button id="load">Load User Data</button>	
+            <button id="display">Display User</button>
+            <button id="save">Save User Page</button>
+            <div id ="drop">
+                <button id="loadPage">Load User Page</button>
+                <div class="dropdown-content"></div>
+            </div>	
         </div>	
     </div>
+
+    <script id="user-template" type="text/x-handlebars-template">
+        <img src="{{picture.medium}}" alt="profile picture" id="profile-pic">
+        <div class="user-info">
+            <p>{{name.first}} {{name.last}}</p>
+            <p>{{location.city}}, {{location.state}}</p>
+        </div>
+    </script>
+
+    <script id="friends-template" type="text/x-handlebars-template">
+        <ul>
+            {{#each this}}
+            <li>{{this.name.first}} {{this.name.last}}</li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <script id="quote-template" type="text/x-handlebars-template">
+        <p>"{{quote}}"</p>
+        <p>-Kanye</p>
+    </script>
+
+    <script id="poke-template" type="text/x-handlebars-template">
+        <img src="{{poke.img}}" alt="pokemon image" id="pokemon-image">
+        <div id="pokemon-text">Favorite Pokemon: {{poke.name}}</div>
+    </script>
+
+    <script id="meat-template" type="text/x-handlebars-template">
+        <div class="meat-text">{{meat}}</div>
+    </script>
+
+    <script id="drop-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="pages" data-id="{{this.id}}">{{this.first}} {{this.last}}</div>
+        {{/each}}
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="APIManager.js"></script>
+    
+    <script src="main.js"></script>
 </body>
 
 </html>

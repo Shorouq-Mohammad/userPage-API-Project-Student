@@ -53,7 +53,7 @@ body {
 }
 
 .quote-container>p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Indie Flower', cursive;
     font-size: 1vmax;
 }
 
@@ -125,4 +125,21 @@ button {
 .meat-text {
     padding: 1vw;
     font-size: 1vmax;
+}
+
+#loadPage:hover{
+    background-color: darkgreen;
+}
+
+.dropdown-content{
+    display:none;
+    background-color: lightgray;
+    width: 150px;
+}
+#drop{
+    display:inline;
+}
+.pages:hover{
+    background-color: grey;
+    cursor: pointer;
 }
